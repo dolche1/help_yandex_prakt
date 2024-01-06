@@ -16,14 +16,9 @@ import java.util.stream.Collectors;
 @Service
 @RequiredArgsConstructor
 public class StatServiceImpl implements StatService {
-    public static final String ITEM_NOT_FOUND_MESSAGE = "Item with id %d not found";
-    private static final String WRONG_OWNER_MESSAGE = "You are not an owner ot this item!";
-
-    private static final String BOOKING_FOR_COMMENT_NOT_FOUND_EXCEPTION_MESSAGE = " You have not booked item %d to comment";
 
     private final StatsMapper mapper;
     private final StatsRepository statsRepository;
-
 
     @Override
     public void addEndpointHit(ViewStatRequestDto viewStatRequestDto) {
